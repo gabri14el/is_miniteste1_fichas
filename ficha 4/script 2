@@ -1,0 +1,23 @@
+create table Book(
+    number int not null,
+    title varchar(1000) not null,
+    author varchar(1000) not null,
+    PRIMARY key (number)
+    );
+    
+create table Student(
+    number int not null,
+    name varchar(1000) not null,
+    address varchar(1000) not null,
+    PRIMARY key (number)
+    );
+    
+create table Loan(
+    number_student int not null,
+    date_loan date not null,
+    number_book int not null,
+    date_received date,
+    PRIMARY key (number_student, date_loan, number_book),
+    FOREIGN KEY (number_student) REFERENCES Student(number),
+    FOREIGN KEY (number_book) REFERENCES Book(number)
+    );

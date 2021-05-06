@@ -1,0 +1,1 @@
+java -jar ~/Downloads/sikulixide-2.0.5-lux.jar -r ficha1.py --args /home/gabriel/pessoas.txt 
